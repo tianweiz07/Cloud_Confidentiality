@@ -1,0 +1,3 @@
+To use, build and run spy <config-file>.  The config file contains the name of the attacked program (map), the difference between program address and file offsets (base - on Linux it is 0x8048000 for 32-bit binaries and 0x400000 for 64-bit binaries), the slot size (slot) and a list of probe.  Each probe is a program address and a character used when the spy finds a hit on the address.  
+
+The code also includes the config file we used for GnupG.  It contains the code lines we used for the attack.  We used the debugging symbols to find the probe addresses from these line numbers.  For example, the gdb command info line mpih-mul.c:270 outputs information on the line, including the addresses that its code occupies.

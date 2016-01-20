@@ -1,0 +1,383 @@
+make  all-recursive
+make[1]: Entering directory `/home/tianweiz/side_channel/gnupg/gnupg-1.4.13'
+Making all in m4
+make[2]: Entering directory `/home/tianweiz/side_channel/gnupg/gnupg-1.4.13/m4'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/tianweiz/side_channel/gnupg/gnupg-1.4.13/m4'
+Making all in intl
+make[2]: Entering directory `/home/tianweiz/side_channel/gnupg/gnupg-1.4.13/intl'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/tianweiz/side_channel/gnupg/gnupg-1.4.13/intl'
+Making all in zlib
+make[2]: Entering directory `/home/tianweiz/side_channel/gnupg/gnupg-1.4.13/zlib'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/tianweiz/side_channel/gnupg/gnupg-1.4.13/zlib'
+Making all in util
+make[2]: Entering directory `/home/tianweiz/side_channel/gnupg/gnupg-1.4.13/util'
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include -I../intl    -g -O2 -Wall -Wno-pointer-sign -MT logger.o -MD -MP -MF .deps/logger.Tpo -c -o logger.o logger.c
+mv -f .deps/logger.Tpo .deps/logger.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include -I../intl    -g -O2 -Wall -Wno-pointer-sign -MT fileutil.o -MD -MP -MF .deps/fileutil.Tpo -c -o fileutil.o fileutil.c
+mv -f .deps/fileutil.Tpo .deps/fileutil.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include -I../intl    -g -O2 -Wall -Wno-pointer-sign -MT miscutil.o -MD -MP -MF .deps/miscutil.Tpo -c -o miscutil.o miscutil.c
+mv -f .deps/miscutil.Tpo .deps/miscutil.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include -I../intl    -g -O2 -Wall -Wno-pointer-sign -MT strgutil.o -MD -MP -MF .deps/strgutil.Tpo -c -o strgutil.o strgutil.c
+mv -f .deps/strgutil.Tpo .deps/strgutil.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include -I../intl    -g -O2 -Wall -Wno-pointer-sign -MT ttyio.o -MD -MP -MF .deps/ttyio.Tpo -c -o ttyio.o ttyio.c
+mv -f .deps/ttyio.Tpo .deps/ttyio.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include -I../intl    -g -O2 -Wall -Wno-pointer-sign -MT argparse.o -MD -MP -MF .deps/argparse.Tpo -c -o argparse.o argparse.c
+mv -f .deps/argparse.Tpo .deps/argparse.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include -I../intl    -g -O2 -Wall -Wno-pointer-sign -MT memory.o -MD -MP -MF .deps/memory.Tpo -c -o memory.o memory.c
+mv -f .deps/memory.Tpo .deps/memory.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include -I../intl    -g -O2 -Wall -Wno-pointer-sign -MT secmem.o -MD -MP -MF .deps/secmem.Tpo -c -o secmem.o secmem.c
+mv -f .deps/secmem.Tpo .deps/secmem.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include -I../intl    -g -O2 -Wall -Wno-pointer-sign -MT errors.o -MD -MP -MF .deps/errors.Tpo -c -o errors.o errors.c
+mv -f .deps/errors.Tpo .deps/errors.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include -I../intl    -g -O2 -Wall -Wno-pointer-sign -MT iobuf.o -MD -MP -MF .deps/iobuf.Tpo -c -o iobuf.o iobuf.c
+mv -f .deps/iobuf.Tpo .deps/iobuf.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include -I../intl    -g -O2 -Wall -Wno-pointer-sign -MT dotlock.o -MD -MP -MF .deps/dotlock.Tpo -c -o dotlock.o dotlock.c
+mv -f .deps/dotlock.Tpo .deps/dotlock.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include -I../intl    -g -O2 -Wall -Wno-pointer-sign -MT http.o -MD -MP -MF .deps/http.Tpo -c -o http.o http.c
+mv -f .deps/http.Tpo .deps/http.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include -I../intl    -g -O2 -Wall -Wno-pointer-sign -MT pka.o -MD -MP -MF .deps/pka.Tpo -c -o pka.o pka.c
+mv -f .deps/pka.Tpo .deps/pka.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include -I../intl    -g -O2 -Wall -Wno-pointer-sign -MT membuf.o -MD -MP -MF .deps/membuf.Tpo -c -o membuf.o membuf.c
+mv -f .deps/membuf.Tpo .deps/membuf.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include -I../intl    -g -O2 -Wall -Wno-pointer-sign -MT cert.o -MD -MP -MF .deps/cert.Tpo -c -o cert.o cert.c
+mv -f .deps/cert.Tpo .deps/cert.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include -I../intl    -g -O2 -Wall -Wno-pointer-sign -MT convert.o -MD -MP -MF .deps/convert.Tpo -c -o convert.o convert.c
+mv -f .deps/convert.Tpo .deps/convert.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include -I../intl    -g -O2 -Wall -Wno-pointer-sign -MT estream-printf.o -MD -MP -MF .deps/estream-printf.Tpo -c -o estream-printf.o estream-printf.c
+mv -f .deps/estream-printf.Tpo .deps/estream-printf.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include -I../intl    -g -O2 -Wall -Wno-pointer-sign -MT compat.o -MD -MP -MF .deps/compat.Tpo -c -o compat.o compat.c
+mv -f .deps/compat.Tpo .deps/compat.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include -I../intl    -g -O2 -Wall -Wno-pointer-sign -MT srv.o -MD -MP -MF .deps/srv.Tpo -c -o srv.o srv.c
+mv -f .deps/srv.Tpo .deps/srv.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include -I../intl    -g -O2 -Wall -Wno-pointer-sign -MT assuan-buffer.o -MD -MP -MF .deps/assuan-buffer.Tpo -c -o assuan-buffer.o assuan-buffer.c
+mv -f .deps/assuan-buffer.Tpo .deps/assuan-buffer.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include -I../intl    -g -O2 -Wall -Wno-pointer-sign -MT assuan-client.o -MD -MP -MF .deps/assuan-client.Tpo -c -o assuan-client.o assuan-client.c
+mv -f .deps/assuan-client.Tpo .deps/assuan-client.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include -I../intl    -g -O2 -Wall -Wno-pointer-sign -MT assuan-errors.o -MD -MP -MF .deps/assuan-errors.Tpo -c -o assuan-errors.o assuan-errors.c
+mv -f .deps/assuan-errors.Tpo .deps/assuan-errors.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include -I../intl    -g -O2 -Wall -Wno-pointer-sign -MT assuan-logging.o -MD -MP -MF .deps/assuan-logging.Tpo -c -o assuan-logging.o assuan-logging.c
+mv -f .deps/assuan-logging.Tpo .deps/assuan-logging.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include -I../intl    -g -O2 -Wall -Wno-pointer-sign -MT assuan-socket-connect.o -MD -MP -MF .deps/assuan-socket-connect.Tpo -c -o assuan-socket-connect.o assuan-socket-connect.c
+mv -f .deps/assuan-socket-connect.Tpo .deps/assuan-socket-connect.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include -I../intl    -g -O2 -Wall -Wno-pointer-sign -MT assuan-connect.o -MD -MP -MF .deps/assuan-connect.Tpo -c -o assuan-connect.o assuan-connect.c
+mv -f .deps/assuan-connect.Tpo .deps/assuan-connect.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include -I../intl    -g -O2 -Wall -Wno-pointer-sign -MT assuan-socket.o -MD -MP -MF .deps/assuan-socket.Tpo -c -o assuan-socket.o assuan-socket.c
+mv -f .deps/assuan-socket.Tpo .deps/assuan-socket.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include -I../intl    -g -O2 -Wall -Wno-pointer-sign -MT assuan-util.o -MD -MP -MF .deps/assuan-util.Tpo -c -o assuan-util.o assuan-util.c
+mv -f .deps/assuan-util.Tpo .deps/assuan-util.Po
+rm -f libutil.a
+ar cru libutil.a logger.o fileutil.o miscutil.o strgutil.o ttyio.o argparse.o memory.o secmem.o errors.o iobuf.o dotlock.o http.o pka.o membuf.o cert.o convert.o estream-printf.o compat.o srv.o   assuan-buffer.o assuan-client.o assuan-errors.o assuan-logging.o assuan-socket-connect.o assuan-connect.o assuan-socket.o assuan-util.o  
+ranlib libutil.a
+rm -f libcompat.a
+ar cru libcompat.a compat.o srv.o 
+ranlib libcompat.a
+make[2]: Leaving directory `/home/tianweiz/side_channel/gnupg/gnupg-1.4.13/util'
+Making all in mpi
+make[2]: Entering directory `/home/tianweiz/side_channel/gnupg/gnupg-1.4.13/mpi'
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include    -g -O2 -Wall -Wno-pointer-sign -MT mpi-add.o -MD -MP -MF .deps/mpi-add.Tpo -c -o mpi-add.o mpi-add.c
+mv -f .deps/mpi-add.Tpo .deps/mpi-add.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include    -g -O2 -Wall -Wno-pointer-sign -MT mpi-bit.o -MD -MP -MF .deps/mpi-bit.Tpo -c -o mpi-bit.o mpi-bit.c
+mv -f .deps/mpi-bit.Tpo .deps/mpi-bit.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include    -g -O2 -Wall -Wno-pointer-sign -MT mpi-cmp.o -MD -MP -MF .deps/mpi-cmp.Tpo -c -o mpi-cmp.o mpi-cmp.c
+mv -f .deps/mpi-cmp.Tpo .deps/mpi-cmp.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include    -g -O2 -Wall -Wno-pointer-sign -MT mpi-div.o -MD -MP -MF .deps/mpi-div.Tpo -c -o mpi-div.o mpi-div.c
+mv -f .deps/mpi-div.Tpo .deps/mpi-div.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include    -g -O2 -Wall -Wno-pointer-sign -MT mpi-gcd.o -MD -MP -MF .deps/mpi-gcd.Tpo -c -o mpi-gcd.o mpi-gcd.c
+mv -f .deps/mpi-gcd.Tpo .deps/mpi-gcd.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include    -g -O2 -Wall -Wno-pointer-sign -MT mpi-inline.o -MD -MP -MF .deps/mpi-inline.Tpo -c -o mpi-inline.o mpi-inline.c
+mv -f .deps/mpi-inline.Tpo .deps/mpi-inline.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include    -g -O2 -Wall -Wno-pointer-sign -MT mpi-inv.o -MD -MP -MF .deps/mpi-inv.Tpo -c -o mpi-inv.o mpi-inv.c
+mv -f .deps/mpi-inv.Tpo .deps/mpi-inv.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include    -g -O2 -Wall -Wno-pointer-sign -MT mpi-mul.o -MD -MP -MF .deps/mpi-mul.Tpo -c -o mpi-mul.o mpi-mul.c
+mv -f .deps/mpi-mul.Tpo .deps/mpi-mul.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include    -g -O2 -Wall -Wno-pointer-sign -MT mpi-pow.o -MD -MP -MF .deps/mpi-pow.Tpo -c -o mpi-pow.o mpi-pow.c
+mv -f .deps/mpi-pow.Tpo .deps/mpi-pow.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include    -g -O2 -Wall -Wno-pointer-sign -MT mpi-mpow.o -MD -MP -MF .deps/mpi-mpow.Tpo -c -o mpi-mpow.o mpi-mpow.c
+mv -f .deps/mpi-mpow.Tpo .deps/mpi-mpow.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include    -g -O2 -Wall -Wno-pointer-sign -MT mpi-scan.o -MD -MP -MF .deps/mpi-scan.Tpo -c -o mpi-scan.o mpi-scan.c
+mv -f .deps/mpi-scan.Tpo .deps/mpi-scan.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include    -g -O2 -Wall -Wno-pointer-sign -MT mpicoder.o -MD -MP -MF .deps/mpicoder.Tpo -c -o mpicoder.o mpicoder.c
+mv -f .deps/mpicoder.Tpo .deps/mpicoder.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include    -g -O2 -Wall -Wno-pointer-sign -MT mpih-cmp.o -MD -MP -MF .deps/mpih-cmp.Tpo -c -o mpih-cmp.o mpih-cmp.c
+mv -f .deps/mpih-cmp.Tpo .deps/mpih-cmp.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include    -g -O2 -Wall -Wno-pointer-sign -MT mpih-div.o -MD -MP -MF .deps/mpih-div.Tpo -c -o mpih-div.o mpih-div.c
+mv -f .deps/mpih-div.Tpo .deps/mpih-div.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include    -g -O2 -Wall -Wno-pointer-sign -MT mpih-mul.o -MD -MP -MF .deps/mpih-mul.Tpo -c -o mpih-mul.o mpih-mul.c
+mv -f .deps/mpih-mul.Tpo .deps/mpih-mul.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include    -g -O2 -Wall -Wno-pointer-sign -MT mpiutil.o -MD -MP -MF .deps/mpiutil.Tpo -c -o mpiutil.o mpiutil.c
+mv -f .deps/mpiutil.Tpo .deps/mpiutil.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include    -g -O2 -Wall -Wno-pointer-sign -MT mpih-mul1.o -MD -MP -MF .deps/mpih-mul1.Tpo -c -o mpih-mul1.o mpih-mul1.c
+mv -f .deps/mpih-mul1.Tpo .deps/mpih-mul1.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include    -g -O2 -Wall -Wno-pointer-sign -MT mpih-mul2.o -MD -MP -MF .deps/mpih-mul2.Tpo -c -o mpih-mul2.o mpih-mul2.c
+mv -f .deps/mpih-mul2.Tpo .deps/mpih-mul2.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include    -g -O2 -Wall -Wno-pointer-sign -MT mpih-mul3.o -MD -MP -MF .deps/mpih-mul3.Tpo -c -o mpih-mul3.o mpih-mul3.c
+mv -f .deps/mpih-mul3.Tpo .deps/mpih-mul3.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include    -g -O2 -Wall -Wno-pointer-sign -MT mpih-add1.o -MD -MP -MF .deps/mpih-add1.Tpo -c -o mpih-add1.o mpih-add1.c
+mv -f .deps/mpih-add1.Tpo .deps/mpih-add1.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include    -g -O2 -Wall -Wno-pointer-sign -MT mpih-sub1.o -MD -MP -MF .deps/mpih-sub1.Tpo -c -o mpih-sub1.o mpih-sub1.c
+mv -f .deps/mpih-sub1.Tpo .deps/mpih-sub1.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include    -g -O2 -Wall -Wno-pointer-sign -MT mpih-lshift.o -MD -MP -MF .deps/mpih-lshift.Tpo -c -o mpih-lshift.o mpih-lshift.c
+mv -f .deps/mpih-lshift.Tpo .deps/mpih-lshift.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I.. -I../include    -g -O2 -Wall -Wno-pointer-sign -MT mpih-rshift.o -MD -MP -MF .deps/mpih-rshift.Tpo -c -o mpih-rshift.o mpih-rshift.c
+mv -f .deps/mpih-rshift.Tpo .deps/mpih-rshift.Po
+rm -f libmpi.a
+ar cru libmpi.a mpi-add.o mpi-bit.o mpi-cmp.o mpi-div.o mpi-gcd.o mpi-inline.o mpi-inv.o mpi-mul.o mpi-pow.o mpi-mpow.o mpi-scan.o mpicoder.o mpih-cmp.o mpih-div.o mpih-mul.o mpiutil.o mpih-mul1.o mpih-mul2.o mpih-mul3.o mpih-add1.o mpih-sub1.o mpih-lshift.o mpih-rshift.o 
+ranlib libmpi.a
+make[2]: Leaving directory `/home/tianweiz/side_channel/gnupg/gnupg-1.4.13/mpi'
+Making all in cipher
+make[2]: Entering directory `/home/tianweiz/side_channel/gnupg/gnupg-1.4.13/cipher'
+gcc -DHAVE_CONFIG_H -I. -I..  -I.. -I../include -I../intl -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT cipher.o -MD -MP -MF .deps/cipher.Tpo -c -o cipher.o cipher.c
+mv -f .deps/cipher.Tpo .deps/cipher.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I.. -I../include -I../intl -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT pubkey.o -MD -MP -MF .deps/pubkey.Tpo -c -o pubkey.o pubkey.c
+mv -f .deps/pubkey.Tpo .deps/pubkey.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I.. -I../include -I../intl -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT md.o -MD -MP -MF .deps/md.Tpo -c -o md.o md.c
+mv -f .deps/md.Tpo .deps/md.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I.. -I../include -I../intl -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT dynload.o -MD -MP -MF .deps/dynload.Tpo -c -o dynload.o dynload.c
+mv -f .deps/dynload.Tpo .deps/dynload.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I.. -I../include -I../intl -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT des.o -MD -MP -MF .deps/des.Tpo -c -o des.o des.c
+mv -f .deps/des.Tpo .deps/des.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I.. -I../include -I../intl -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT twofish.o -MD -MP -MF .deps/twofish.Tpo -c -o twofish.o twofish.c
+mv -f .deps/twofish.Tpo .deps/twofish.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I.. -I../include -I../intl -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT blowfish.o -MD -MP -MF .deps/blowfish.Tpo -c -o blowfish.o blowfish.c
+mv -f .deps/blowfish.Tpo .deps/blowfish.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I.. -I../include -I../intl -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT cast5.o -MD -MP -MF .deps/cast5.Tpo -c -o cast5.o cast5.c
+mv -f .deps/cast5.Tpo .deps/cast5.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I.. -I../include -I../intl -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT rijndael.o -MD -MP -MF .deps/rijndael.Tpo -c -o rijndael.o rijndael.c
+mv -f .deps/rijndael.Tpo .deps/rijndael.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I.. -I../include -I../intl -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT camellia.o -MD -MP -MF .deps/camellia.Tpo -c -o camellia.o camellia.c
+mv -f .deps/camellia.Tpo .deps/camellia.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I.. -I../include -I../intl -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT camellia-glue.o -MD -MP -MF .deps/camellia-glue.Tpo -c -o camellia-glue.o camellia-glue.c
+mv -f .deps/camellia-glue.Tpo .deps/camellia-glue.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I.. -I../include -I../intl -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT idea.o -MD -MP -MF .deps/idea.Tpo -c -o idea.o idea.c
+mv -f .deps/idea.Tpo .deps/idea.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I.. -I../include -I../intl -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT elgamal.o -MD -MP -MF .deps/elgamal.Tpo -c -o elgamal.o elgamal.c
+mv -f .deps/elgamal.Tpo .deps/elgamal.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I.. -I../include -I../intl -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT rsa.o -MD -MP -MF .deps/rsa.Tpo -c -o rsa.o rsa.c
+mv -f .deps/rsa.Tpo .deps/rsa.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I.. -I../include -I../intl -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT primegen.o -MD -MP -MF .deps/primegen.Tpo -c -o primegen.o primegen.c
+mv -f .deps/primegen.Tpo .deps/primegen.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I.. -I../include -I../intl -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT random.o -MD -MP -MF .deps/random.Tpo -c -o random.o random.c
+mv -f .deps/random.Tpo .deps/random.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I.. -I../include -I../intl -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT dsa.o -MD -MP -MF .deps/dsa.Tpo -c -o dsa.o dsa.c
+mv -f .deps/dsa.Tpo .deps/dsa.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I.. -I../include -I../intl -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT smallprime.o -MD -MP -MF .deps/smallprime.Tpo -c -o smallprime.o smallprime.c
+mv -f .deps/smallprime.Tpo .deps/smallprime.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I.. -I../include -I../intl -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT md5.o -MD -MP -MF .deps/md5.Tpo -c -o md5.o md5.c
+mv -f .deps/md5.Tpo .deps/md5.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I.. -I../include -I../intl -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT rmd160.o -MD -MP -MF .deps/rmd160.Tpo -c -o rmd160.o rmd160.c
+mv -f .deps/rmd160.Tpo .deps/rmd160.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I.. -I../include -I../intl -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT sha1.o -MD -MP -MF .deps/sha1.Tpo -c -o sha1.o sha1.c
+mv -f .deps/sha1.Tpo .deps/sha1.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I.. -I../include -I../intl -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT sha256.o -MD -MP -MF .deps/sha256.Tpo -c -o sha256.o sha256.c
+mv -f .deps/sha256.Tpo .deps/sha256.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I.. -I../include -I../intl -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT rndlinux.o -MD -MP -MF .deps/rndlinux.Tpo -c -o rndlinux.o rndlinux.c
+mv -f .deps/rndlinux.Tpo .deps/rndlinux.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I.. -I../include -I../intl -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT sha512.o -MD -MP -MF .deps/sha512.Tpo -c -o sha512.o sha512.c
+mv -f .deps/sha512.Tpo .deps/sha512.Po
+rm -f libcipher.a
+ar cru libcipher.a cipher.o pubkey.o md.o dynload.o des.o twofish.o blowfish.o cast5.o rijndael.o camellia.o camellia-glue.o idea.o elgamal.o rsa.o primegen.o random.o dsa.o smallprime.o md5.o rmd160.o sha1.o sha256.o rndlinux.o    sha512.o 
+ranlib libcipher.a
+make[2]: Leaving directory `/home/tianweiz/side_channel/gnupg/gnupg-1.4.13/cipher'
+Making all in tools
+make[2]: Entering directory `/home/tianweiz/side_channel/gnupg/gnupg-1.4.13/tools'
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\""   -g -O2 -Wall -Wno-pointer-sign -MT gpgsplit.o -MD -MP -MF .deps/gpgsplit.Tpo -c -o gpgsplit.o gpgsplit.c
+mv -f .deps/gpgsplit.Tpo .deps/gpgsplit.Po
+gcc  -g -O2 -Wall -Wno-pointer-sign   -o gpgsplit gpgsplit.o ../cipher/libcipher.a ../mpi/libmpi.a ../util/libutil.a     -lz 
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\""   -g -O2 -Wall -Wno-pointer-sign -MT mpicalc.o -MD -MP -MF .deps/mpicalc.Tpo -c -o mpicalc.o mpicalc.c
+mv -f .deps/mpicalc.Tpo .deps/mpicalc.Po
+gcc  -g -O2 -Wall -Wno-pointer-sign   -o mpicalc mpicalc.o ../cipher/libcipher.a ../mpi/libmpi.a ../util/libutil.a      
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\""   -g -O2 -Wall -Wno-pointer-sign -MT bftest.o -MD -MP -MF .deps/bftest.Tpo -c -o bftest.o bftest.c
+mv -f .deps/bftest.Tpo .deps/bftest.Po
+gcc  -g -O2 -Wall -Wno-pointer-sign   -o bftest bftest.o ../cipher/libcipher.a ../mpi/libmpi.a ../util/libutil.a      -ldl    
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\""   -g -O2 -Wall -Wno-pointer-sign -MT clean-sat.o -MD -MP -MF .deps/clean-sat.Tpo -c -o clean-sat.o clean-sat.c
+mv -f .deps/clean-sat.Tpo .deps/clean-sat.Po
+gcc  -g -O2 -Wall -Wno-pointer-sign   -o clean-sat clean-sat.o  
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\""   -g -O2 -Wall -Wno-pointer-sign -MT mk-tdata.o -MD -MP -MF .deps/mk-tdata.Tpo -c -o mk-tdata.o mk-tdata.c
+mv -f .deps/mk-tdata.Tpo .deps/mk-tdata.Po
+gcc  -g -O2 -Wall -Wno-pointer-sign   -o mk-tdata mk-tdata.o  
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\""   -g -O2 -Wall -Wno-pointer-sign -MT shmtest.o -MD -MP -MF .deps/shmtest.Tpo -c -o shmtest.o shmtest.c
+mv -f .deps/shmtest.Tpo .deps/shmtest.Po
+gcc  -g -O2 -Wall -Wno-pointer-sign   -o shmtest shmtest.o ../cipher/libcipher.a ../mpi/libmpi.a ../util/libutil.a      
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\""   -g -O2 -Wall -Wno-pointer-sign -MT make-dns-cert.o -MD -MP -MF .deps/make-dns-cert.Tpo -c -o make-dns-cert.o make-dns-cert.c
+mv -f .deps/make-dns-cert.Tpo .deps/make-dns-cert.Po
+gcc  -g -O2 -Wall -Wno-pointer-sign   -o make-dns-cert make-dns-cert.o  
+make[2]: Leaving directory `/home/tianweiz/side_channel/gnupg/gnupg-1.4.13/tools'
+Making all in g10
+make[2]: Entering directory `/home/tianweiz/side_channel/gnupg/gnupg-1.4.13/g10'
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT gpg.o -MD -MP -MF .deps/gpg.Tpo -c -o gpg.o gpg.c
+mv -f .deps/gpg.Tpo .deps/gpg.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT build-packet.o -MD -MP -MF .deps/build-packet.Tpo -c -o build-packet.o build-packet.c
+mv -f .deps/build-packet.Tpo .deps/build-packet.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT compress.o -MD -MP -MF .deps/compress.Tpo -c -o compress.o compress.c
+mv -f .deps/compress.Tpo .deps/compress.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT free-packet.o -MD -MP -MF .deps/free-packet.Tpo -c -o free-packet.o free-packet.c
+mv -f .deps/free-packet.Tpo .deps/free-packet.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT getkey.o -MD -MP -MF .deps/getkey.Tpo -c -o getkey.o getkey.c
+mv -f .deps/getkey.Tpo .deps/getkey.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT keydb.o -MD -MP -MF .deps/keydb.Tpo -c -o keydb.o keydb.c
+mv -f .deps/keydb.Tpo .deps/keydb.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT keyring.o -MD -MP -MF .deps/keyring.Tpo -c -o keyring.o keyring.c
+mv -f .deps/keyring.Tpo .deps/keyring.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT seskey.o -MD -MP -MF .deps/seskey.Tpo -c -o seskey.o seskey.c
+mv -f .deps/seskey.Tpo .deps/seskey.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT kbnode.o -MD -MP -MF .deps/kbnode.Tpo -c -o kbnode.o kbnode.c
+mv -f .deps/kbnode.Tpo .deps/kbnode.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT mainproc.o -MD -MP -MF .deps/mainproc.Tpo -c -o mainproc.o mainproc.c
+mv -f .deps/mainproc.Tpo .deps/mainproc.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT armor.o -MD -MP -MF .deps/armor.Tpo -c -o armor.o armor.c
+mv -f .deps/armor.Tpo .deps/armor.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT mdfilter.o -MD -MP -MF .deps/mdfilter.Tpo -c -o mdfilter.o mdfilter.c
+mv -f .deps/mdfilter.Tpo .deps/mdfilter.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT textfilter.o -MD -MP -MF .deps/textfilter.Tpo -c -o textfilter.o textfilter.c
+mv -f .deps/textfilter.Tpo .deps/textfilter.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT progress.o -MD -MP -MF .deps/progress.Tpo -c -o progress.o progress.c
+mv -f .deps/progress.Tpo .deps/progress.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT misc.o -MD -MP -MF .deps/misc.Tpo -c -o misc.o misc.c
+mv -f .deps/misc.Tpo .deps/misc.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT openfile.o -MD -MP -MF .deps/openfile.Tpo -c -o openfile.o openfile.c
+mv -f .deps/openfile.Tpo .deps/openfile.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT keyid.o -MD -MP -MF .deps/keyid.Tpo -c -o keyid.o keyid.c
+mv -f .deps/keyid.Tpo .deps/keyid.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT parse-packet.o -MD -MP -MF .deps/parse-packet.Tpo -c -o parse-packet.o parse-packet.c
+mv -f .deps/parse-packet.Tpo .deps/parse-packet.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT status.o -MD -MP -MF .deps/status.Tpo -c -o status.o status.c
+mv -f .deps/status.Tpo .deps/status.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT plaintext.o -MD -MP -MF .deps/plaintext.Tpo -c -o plaintext.o plaintext.c
+mv -f .deps/plaintext.Tpo .deps/plaintext.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT sig-check.o -MD -MP -MF .deps/sig-check.Tpo -c -o sig-check.o sig-check.c
+mv -f .deps/sig-check.Tpo .deps/sig-check.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT keylist.o -MD -MP -MF .deps/keylist.Tpo -c -o keylist.o keylist.c
+mv -f .deps/keylist.Tpo .deps/keylist.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT signal.o -MD -MP -MF .deps/signal.Tpo -c -o signal.o signal.c
+mv -f .deps/signal.Tpo .deps/signal.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT cardglue.o -MD -MP -MF .deps/cardglue.Tpo -c -o cardglue.o cardglue.c
+mv -f .deps/cardglue.Tpo .deps/cardglue.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT tlv.o -MD -MP -MF .deps/tlv.Tpo -c -o tlv.o tlv.c
+mv -f .deps/tlv.Tpo .deps/tlv.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT card-util.o -MD -MP -MF .deps/card-util.Tpo -c -o card-util.o card-util.c
+mv -f .deps/card-util.Tpo .deps/card-util.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT app-openpgp.o -MD -MP -MF .deps/app-openpgp.Tpo -c -o app-openpgp.o app-openpgp.c
+mv -f .deps/app-openpgp.Tpo .deps/app-openpgp.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT iso7816.o -MD -MP -MF .deps/iso7816.Tpo -c -o iso7816.o iso7816.c
+mv -f .deps/iso7816.Tpo .deps/iso7816.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT apdu.o -MD -MP -MF .deps/apdu.Tpo -c -o apdu.o apdu.c
+mv -f .deps/apdu.Tpo .deps/apdu.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT ccid-driver.o -MD -MP -MF .deps/ccid-driver.Tpo -c -o ccid-driver.o ccid-driver.c
+mv -f .deps/ccid-driver.Tpo .deps/ccid-driver.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT pkclist.o -MD -MP -MF .deps/pkclist.Tpo -c -o pkclist.o pkclist.c
+mv -f .deps/pkclist.Tpo .deps/pkclist.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT skclist.o -MD -MP -MF .deps/skclist.Tpo -c -o skclist.o skclist.c
+mv -f .deps/skclist.Tpo .deps/skclist.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT pubkey-enc.o -MD -MP -MF .deps/pubkey-enc.Tpo -c -o pubkey-enc.o pubkey-enc.c
+mv -f .deps/pubkey-enc.Tpo .deps/pubkey-enc.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT passphrase.o -MD -MP -MF .deps/passphrase.Tpo -c -o passphrase.o passphrase.c
+mv -f .deps/passphrase.Tpo .deps/passphrase.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT seckey-cert.o -MD -MP -MF .deps/seckey-cert.Tpo -c -o seckey-cert.o seckey-cert.c
+mv -f .deps/seckey-cert.Tpo .deps/seckey-cert.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT encr-data.o -MD -MP -MF .deps/encr-data.Tpo -c -o encr-data.o encr-data.c
+mv -f .deps/encr-data.Tpo .deps/encr-data.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT cipher.o -MD -MP -MF .deps/cipher.Tpo -c -o cipher.o cipher.c
+mv -f .deps/cipher.Tpo .deps/cipher.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT encode.o -MD -MP -MF .deps/encode.Tpo -c -o encode.o encode.c
+mv -f .deps/encode.Tpo .deps/encode.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT sign.o -MD -MP -MF .deps/sign.Tpo -c -o sign.o sign.c
+mv -f .deps/sign.Tpo .deps/sign.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT verify.o -MD -MP -MF .deps/verify.Tpo -c -o verify.o verify.c
+mv -f .deps/verify.Tpo .deps/verify.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT revoke.o -MD -MP -MF .deps/revoke.Tpo -c -o revoke.o revoke.c
+mv -f .deps/revoke.Tpo .deps/revoke.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT decrypt.o -MD -MP -MF .deps/decrypt.Tpo -c -o decrypt.o decrypt.c
+mv -f .deps/decrypt.Tpo .deps/decrypt.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT keyedit.o -MD -MP -MF .deps/keyedit.Tpo -c -o keyedit.o keyedit.c
+mv -f .deps/keyedit.Tpo .deps/keyedit.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT dearmor.o -MD -MP -MF .deps/dearmor.Tpo -c -o dearmor.o dearmor.c
+mv -f .deps/dearmor.Tpo .deps/dearmor.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT import.o -MD -MP -MF .deps/import.Tpo -c -o import.o import.c
+mv -f .deps/import.Tpo .deps/import.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT export.o -MD -MP -MF .deps/export.Tpo -c -o export.o export.c
+mv -f .deps/export.Tpo .deps/export.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT trustdb.o -MD -MP -MF .deps/trustdb.Tpo -c -o trustdb.o trustdb.c
+mv -f .deps/trustdb.Tpo .deps/trustdb.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT tdbdump.o -MD -MP -MF .deps/tdbdump.Tpo -c -o tdbdump.o tdbdump.c
+mv -f .deps/tdbdump.Tpo .deps/tdbdump.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT tdbio.o -MD -MP -MF .deps/tdbio.Tpo -c -o tdbio.o tdbio.c
+mv -f .deps/tdbio.Tpo .deps/tdbio.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT delkey.o -MD -MP -MF .deps/delkey.Tpo -c -o delkey.o delkey.c
+mv -f .deps/delkey.Tpo .deps/delkey.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT keygen.o -MD -MP -MF .deps/keygen.Tpo -c -o keygen.o keygen.c
+mv -f .deps/keygen.Tpo .deps/keygen.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT pipemode.o -MD -MP -MF .deps/pipemode.Tpo -c -o pipemode.o pipemode.c
+mv -f .deps/pipemode.Tpo .deps/pipemode.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT helptext.o -MD -MP -MF .deps/helptext.Tpo -c -o helptext.o helptext.c
+mv -f .deps/helptext.Tpo .deps/helptext.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT keyserver.o -MD -MP -MF .deps/keyserver.Tpo -c -o keyserver.o keyserver.c
+mv -f .deps/keyserver.Tpo .deps/keyserver.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT photoid.o -MD -MP -MF .deps/photoid.Tpo -c -o photoid.o photoid.c
+mv -f .deps/photoid.Tpo .deps/photoid.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT exec.o -MD -MP -MF .deps/exec.Tpo -c -o exec.o exec.c
+mv -f .deps/exec.Tpo .deps/exec.Po
+gcc  -g -O2 -Wall -Wno-pointer-sign   -o gpg gpg.o build-packet.o compress.o  free-packet.o getkey.o keydb.o keyring.o seskey.o kbnode.o mainproc.o armor.o mdfilter.o textfilter.o progress.o misc.o openfile.o keyid.o parse-packet.o status.o plaintext.o sig-check.o keylist.o signal.o cardglue.o tlv.o card-util.o app-openpgp.o iso7816.o apdu.o ccid-driver.o pkclist.o skclist.o pubkey-enc.o passphrase.o seckey-cert.o encr-data.o cipher.o encode.o sign.o verify.o revoke.o decrypt.o keyedit.o dearmor.o import.o export.o trustdb.o tdbdump.o tdbio.o delkey.o keygen.o pipemode.o helptext.o keyserver.o photoid.o exec.o ../cipher/libcipher.a ../mpi/libmpi.a ../util/libutil.a  -lresolv    -lz   -ldl    
+gcc -DHAVE_CONFIG_H -I. -I..  -I../include -I../intl -DLOCALEDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/locale\"" -DGNUPG_LIBEXECDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/libexec/gnupg\"" -DGNUPG_DATADIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/share/gnupg\"" -DGNUPG_LIBDIR="\"/home/tianweiz/side_channel/gnupg/gnupg-install/lib/gnupg\""   -g -O2 -Wall -Wno-pointer-sign -MT gpgv.o -MD -MP -MF .deps/gpgv.Tpo -c -o gpgv.o gpgv.c
+mv -f .deps/gpgv.Tpo .deps/gpgv.Po
+gcc  -g -O2 -Wall -Wno-pointer-sign   -o gpgv gpgv.o build-packet.o compress.o  free-packet.o getkey.o keydb.o keyring.o seskey.o kbnode.o mainproc.o armor.o mdfilter.o textfilter.o progress.o misc.o openfile.o keyid.o parse-packet.o status.o plaintext.o sig-check.o keylist.o signal.o verify.o ../cipher/libcipher.a ../mpi/libmpi.a ../util/libutil.a  -lresolv    -lz  
+make[2]: Leaving directory `/home/tianweiz/side_channel/gnupg/gnupg-1.4.13/g10'
+Making all in keyserver
+make[2]: Entering directory `/home/tianweiz/side_channel/gnupg/gnupg-1.4.13/keyserver'
+gcc -DHAVE_CONFIG_H -I. -I.. -I../include -I../intl    -g -O2 -Wall -Wno-pointer-sign -MT gpgkeys_hkp-gpgkeys_hkp.o -MD -MP -MF .deps/gpgkeys_hkp-gpgkeys_hkp.Tpo -c -o gpgkeys_hkp-gpgkeys_hkp.o `test -f 'gpgkeys_hkp.c' || echo './'`gpgkeys_hkp.c
+mv -f .deps/gpgkeys_hkp-gpgkeys_hkp.Tpo .deps/gpgkeys_hkp-gpgkeys_hkp.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I../include -I../intl    -g -O2 -Wall -Wno-pointer-sign -MT gpgkeys_hkp-ksutil.o -MD -MP -MF .deps/gpgkeys_hkp-ksutil.Tpo -c -o gpgkeys_hkp-ksutil.o `test -f 'ksutil.c' || echo './'`ksutil.c
+mv -f .deps/gpgkeys_hkp-ksutil.Tpo .deps/gpgkeys_hkp-ksutil.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I../include -I../intl    -g -O2 -Wall -Wno-pointer-sign -MT gpgkeys_hkp-curl-shim.o -MD -MP -MF .deps/gpgkeys_hkp-curl-shim.Tpo -c -o gpgkeys_hkp-curl-shim.o `test -f 'curl-shim.c' || echo './'`curl-shim.c
+mv -f .deps/gpgkeys_hkp-curl-shim.Tpo .deps/gpgkeys_hkp-curl-shim.Po
+gcc  -g -O2 -Wall -Wno-pointer-sign   -o gpgkeys_hkp gpgkeys_hkp-gpgkeys_hkp.o gpgkeys_hkp-ksutil.o gpgkeys_hkp-curl-shim.o  ../util/libutil.a  -lresolv       
+gcc -DHAVE_CONFIG_H -I. -I.. -I../include -I../intl    -g -O2 -Wall -Wno-pointer-sign -MT gpgkeys_finger-gpgkeys_finger.o -MD -MP -MF .deps/gpgkeys_finger-gpgkeys_finger.Tpo -c -o gpgkeys_finger-gpgkeys_finger.o `test -f 'gpgkeys_finger.c' || echo './'`gpgkeys_finger.c
+mv -f .deps/gpgkeys_finger-gpgkeys_finger.Tpo .deps/gpgkeys_finger-gpgkeys_finger.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I../include -I../intl    -g -O2 -Wall -Wno-pointer-sign -MT gpgkeys_finger-ksutil.o -MD -MP -MF .deps/gpgkeys_finger-ksutil.Tpo -c -o gpgkeys_finger-ksutil.o `test -f 'ksutil.c' || echo './'`ksutil.c
+mv -f .deps/gpgkeys_finger-ksutil.Tpo .deps/gpgkeys_finger-ksutil.Po
+gcc  -g -O2 -Wall -Wno-pointer-sign   -o gpgkeys_finger gpgkeys_finger-gpgkeys_finger.o gpgkeys_finger-ksutil.o ../util/libutil.a       
+gcc -DHAVE_CONFIG_H -I. -I.. -I../include -I../intl    -g -O2 -Wall -Wno-pointer-sign -MT gpgkeys_curl-gpgkeys_curl.o -MD -MP -MF .deps/gpgkeys_curl-gpgkeys_curl.Tpo -c -o gpgkeys_curl-gpgkeys_curl.o `test -f 'gpgkeys_curl.c' || echo './'`gpgkeys_curl.c
+mv -f .deps/gpgkeys_curl-gpgkeys_curl.Tpo .deps/gpgkeys_curl-gpgkeys_curl.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I../include -I../intl    -g -O2 -Wall -Wno-pointer-sign -MT gpgkeys_curl-ksutil.o -MD -MP -MF .deps/gpgkeys_curl-ksutil.Tpo -c -o gpgkeys_curl-ksutil.o `test -f 'ksutil.c' || echo './'`ksutil.c
+mv -f .deps/gpgkeys_curl-ksutil.Tpo .deps/gpgkeys_curl-ksutil.Po
+gcc -DHAVE_CONFIG_H -I. -I.. -I../include -I../intl    -g -O2 -Wall -Wno-pointer-sign -MT gpgkeys_curl-curl-shim.o -MD -MP -MF .deps/gpgkeys_curl-curl-shim.Tpo -c -o gpgkeys_curl-curl-shim.o `test -f 'curl-shim.c' || echo './'`curl-shim.c
+mv -f .deps/gpgkeys_curl-curl-shim.Tpo .deps/gpgkeys_curl-curl-shim.Po
+gcc  -g -O2 -Wall -Wno-pointer-sign   -o gpgkeys_curl gpgkeys_curl-gpgkeys_curl.o gpgkeys_curl-ksutil.o gpgkeys_curl-curl-shim.o  ../util/libutil.a  -lresolv       
+make[2]: Leaving directory `/home/tianweiz/side_channel/gnupg/gnupg-1.4.13/keyserver'
+Making all in po
+make[2]: Entering directory `/home/tianweiz/side_channel/gnupg/gnupg-1.4.13/po'
+make[2]: Leaving directory `/home/tianweiz/side_channel/gnupg/gnupg-1.4.13/po'
+Making all in doc
+make[2]: Entering directory `/home/tianweiz/side_channel/gnupg/gnupg-1.4.13/doc'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/tianweiz/side_channel/gnupg/gnupg-1.4.13/doc'
+Making all in checks
+make[2]: Entering directory `/home/tianweiz/side_channel/gnupg/gnupg-1.4.13/checks'
+echo '#!/bin/sh' >./gpg_dearmor
+echo "../g10/gpg --no-options --no-greeting \
+             --no-secmem-warning --batch --dearmor" >>./gpg_dearmor
+chmod 755 ./gpg_dearmor
+./gpg_dearmor > ./pubring.gpg < ./pubring.asc
+./gpg_dearmor > ./secring.gpg < ./secring.asc
+./gpg_dearmor > ./plain-1 < ./plain-1o.asc
+./gpg_dearmor > ./plain-2 < ./plain-2o.asc
+./gpg_dearmor > ./plain-3 < ./plain-3o.asc
+./gpg_dearmor > ./pubring.pkr < ./pubring.pkr.asc
+./gpg_dearmor > ./secring.skr < ./secring.skr.asc
+../tools/mk-tdata   500  >data-500
+../tools/mk-tdata  9000  >data-9000
+../tools/mk-tdata 32000  >data-32000
+../tools/mk-tdata 80000  >data-80000
+cat ./../doc/HACKING \
+	    ./../doc/DETAILS \
+	    ./../doc/FAQ	 >plain-large
+../g10/gpg --homedir . --quiet --yes --no-permission-warning --import ./pubdemo.asc
+echo '# Do not edit - created by the Makefile.      -*- sh -*-' \
+               > defs-config.inc
+echo enable_selinux_hacks=no >> defs-config.inc
+make[2]: Leaving directory `/home/tianweiz/side_channel/gnupg/gnupg-1.4.13/checks'
+make[2]: Entering directory `/home/tianweiz/side_channel/gnupg/gnupg-1.4.13'
+make[2]: Leaving directory `/home/tianweiz/side_channel/gnupg/gnupg-1.4.13'
+make[1]: Leaving directory `/home/tianweiz/side_channel/gnupg/gnupg-1.4.13'

@@ -1,0 +1,6 @@
+map /home/tianweiz/side_channel/gnupg/gnupg-install/bin/gpg
+base 0x400000
+probe 0x493130 S #mpih-mul.c:270 (First cache line in mpih_sqr_n())
+probe 0x492058 r #mpih-div.c:329 (Loop in default case in mpihelp_divrem())
+probe 0x492c40 M #mpih-mul.c:121 (First cache line of mul_n())
+slot 8192

