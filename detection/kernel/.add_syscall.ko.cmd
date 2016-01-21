@@ -1,0 +1,1 @@
+cmd_/home/tianweiz/cache_detect/detection/kernel/add_syscall.ko := ld -r -m elf_x86_64 -T /usr/src/linux-headers-3.13.0-32-generic/scripts/module-common.lds --build-id  -o /home/tianweiz/cache_detect/detection/kernel/add_syscall.ko /home/tianweiz/cache_detect/detection/kernel/add_syscall.o /home/tianweiz/cache_detect/detection/kernel/add_syscall.mod.o

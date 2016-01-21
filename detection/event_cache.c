@@ -19,8 +19,8 @@ int main(int argc, char **argv) {
         int fd;
 
         int pid = atoi(argv[1]);
-        uint64_t INTERVAL = atoi(argv[2])*(uint64_t)1000;
-        int ROUND = atoi(argv[3]);
+        uint64_t INTERVAL = 3000000;
+        int ROUND = atoi(argv[2]);
 
         int j;
 

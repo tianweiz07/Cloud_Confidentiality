@@ -18,8 +18,8 @@ int main(int argc, char **argv) {
         struct perf_event_attr pe;
         int fd;
 	int pid = atoi(argv[1]);
-        uint64_t INTERVAL = atoi(argv[2])*(uint64_t)1000;
-        int ROUND = atoi(argv[3]);
+        uint64_t INTERVAL = 300000;
+        int ROUND = atoi(argv[2]);
 
         int j;
 
@@ -47,7 +47,7 @@ int main(int argc, char **argv) {
 
         uint64_t start_cycle;
 
-        fd = syscall(__NR_perf_event_open, &pe, -1, 0, -1, 0);
+        fd = syscall(__NR_perf_event_open, &pe, pid, -1, -1, 0);
         uint64_t begin_stamp = rdtsc();
         for (j=0; j<ROUND; j++) {
                 ioctl(fd, PERF_EVENT_IOC_RESET, 0);

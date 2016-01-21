@@ -24,9 +24,11 @@
 #define MAX(x, y) (((x) > (y)) ? (x) : (y))
 
 #define constraint WINDOW_SIZE
+#define __NR_Check 189
+#define __NR_PID 1
 
 int pid_v;
-int pid_a;
+int pid_a[__NR_PID];
 uint64_t INTERVAL_V;
 uint64_t INTERVAL_A;
 int ROUND_V; 
@@ -141,13 +143,6 @@ void *cal_data(void *argv) {
 }
 
 void *perf_victim(void *argv) {
-//	cpu_set_t set;
-//	CPU_ZERO(&set);
-//	CPU_SET(0, &set);
-//	if (sched_setaffinity(syscall(SYS_gettid), sizeof(cpu_set_t), &set)) {
-//		fprintf(stderr, "Error set affinity\n")  ;
-//		return;
-//	}
 
 	/* Training the dataset*/
 	training();
@@ -173,8 +168,8 @@ void *perf_victim(void *argv) {
         pe.exclude_host = 0;
         pe.exclude_guest = 0;
 
-//        fd = syscall(__NR_perf_event_open, &pe, pid_v, -1, -1, 0);
-        fd = syscall(__NR_perf_event_open, &pe, -1, 0, -1, 0);
+        fd = syscall(__NR_perf_event_open, &pe, pid_v, -1, -1, 0);
+//        fd = syscall(__NR_perf_event_open, &pe, -1, 0, -1, 0);
 
 
 	/* First round */
@@ -244,19 +239,17 @@ void *perf_victim(void *argv) {
 }
 
 void *perf_attacker(void *argv) {
-//	cpu_set_t set;
-//	CPU_ZERO(&set);
-// 	CPU_SET(1, &set);
-//	if (sched_setaffinity(syscall(SYS_gettid), sizeof(cpu_set_t), &set)) {
-//		fprintf(stderr, "Error set affinity\n")  ;
-//		return;
-//	}
 
-        int j;
+        int i, j;
 
         uint64_t value;
 
-        FILE *output = fopen("obser_res", "a");
+        FILE *output[__NR_PID];
+	for (j=0; j<__NR_PID; j++) {
+		char name[10];
+		sprintf(name, "%d", pid_a[j]);
+		output[j] = fopen(name, "a");
+	}
 
         struct perf_event_attr pe;
         int fd;
@@ -276,30 +269,44 @@ void *perf_attacker(void *argv) {
 
         uint64_t start_cycle;
 
-        fd = syscall(__NR_perf_event_open, &pe, pid_a, -1, -1, 0);
 	begin_stamp = 0;
 	while (begin_stamp == 0);
+	int x[__NR_PID];
         for (j=0; j<ROUND_A; j++) {
-                ioctl(fd, PERF_EVENT_IOC_RESET, 0);
-                ioctl(fd, PERF_EVENT_IOC_ENABLE, 0);
+		for (i=0; i<__NR_PID; i++)
+			x[i] = pid_a[i];
+		syscall(__NR_Check, x);
 
-                start_cycle = rdtsc();
-                while(rdtsc()-start_cycle<INTERVAL_A);
+		for (i=0; i<__NR_PID; i++) {
+			if (x[i] > 0) {
+        			fd = syscall(__NR_perf_event_open, &pe, pid_a[i], -1, -1, 0);
+		                ioctl(fd, PERF_EVENT_IOC_RESET, 0);
+        		        ioctl(fd, PERF_EVENT_IOC_ENABLE, 0);
 
-                ioctl(fd, PERF_EVENT_IOC_DISABLE, 0);
-                read(fd, &value, sizeof(long long));
-                fprintf(output, "%lu:           %lu\n", (start_cycle-begin_stamp)/1000, value);
+      			        start_cycle = rdtsc();
+		                while(rdtsc()-start_cycle<INTERVAL_A);
+
+		                ioctl(fd, PERF_EVENT_IOC_DISABLE, 0);
+		                read(fd, &value, sizeof(long long));
+		                fprintf(output[i], "%lu:           %lu\n", (start_cycle-begin_stamp)/1000, value);
+        			close(fd);
+
+			}
+		}
+
 	}
-
-        close(fd);
-
-        fclose(output);
+	for (j=0; j<__NR_PID; j++) {
+	        fclose(output[j]);
+	}
         return 0;
 }
 
 int main(int argc, char **argv) {
         pid_v = atoi(argv[1]);
-	pid_a = atoi(argv[2]);
+	int i;
+	for (i=0; i<__NR_PID; i++) {
+		pid_a[i] = atoi(argv[2+i]);
+	}
 	INTERVAL_V = 300000;
 	INTERVAL_A = 3000000;
 	ROUND_V = 50000;
