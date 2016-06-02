@@ -18,7 +18,7 @@ int main(int argc, char **argv) {
         struct perf_event_attr pe;
         int fd;
 	int pid = atoi(argv[1]);
-        uint64_t INTERVAL = 300000;
+        uint64_t INTERVAL = 3000000;
         int ROUND = atoi(argv[2]);
 
         int j;
@@ -29,12 +29,21 @@ int main(int argc, char **argv) {
         value = (uint64_t*)malloc(ROUND*sizeof(uint64_t));
 
         memset(&pe, 0, sizeof(struct perf_event_attr));
-	// ARITH_MUL operations
 //        pe.type = PERF_TYPE_RAW;
-//        pe.config = 0x530114;
+//        pe.config = 0x530110;
+//        pe.type = PERF_TYPE_SOFTWARE;
+//        pe.config = 
+//PERF_COUNT_SW_PAGE_FAULTS;
+//	PERF_COUNT_SW_CPU_CLOCK;
 	//  Instructions or branch instructions.
         pe.type = PERF_TYPE_HARDWARE;
-        pe.config = PERF_COUNT_HW_BRANCH_INSTRUCTIONS;
+        pe.config = 
+//	PERF_COUNT_HW_CPU_CYCLES;
+//	PERF_COUNT_HW_BRANCH_INSTRUCTIONS;
+	PERF_COUNT_HW_INSTRUCTIONS;
+//	PERF_COUNT_HW_BRANCH_MISSES;
+//        pe.type = PERF_TYPE_HW_CACHE;
+//        pe.config = (PERF_COUNT_HW_CACHE_DTLB)|(PERF_COUNT_HW_CACHE_OP_READ << 8)|(PERF_COUNT_HW_CACHE_RESULT_MISS << 16);
         pe.size = sizeof(struct perf_event_attr);
         pe.disabled = 1;
         pe.inherit = 0;
@@ -63,7 +72,7 @@ int main(int argc, char **argv) {
         close(fd);
 
         for (j=0; j<ROUND; j++) {
-                printf("%lu           %lu\n", time[j], value[j]);
+		printf("%lu     %lu\n", time[j], value[j]);
         }
 
         return 0;

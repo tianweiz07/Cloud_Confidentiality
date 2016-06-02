@@ -19,7 +19,7 @@
 #include <asm/unistd.h>
 #include <linux/perf_event.h>
 
-#define WINDOW_SIZE 111
+#define WINDOW_SIZE 22
 #define MIN(x, y) (((x) < (y)) ? (x) : (y))
 #define MAX(x, y) (((x) > (y)) ? (x) : (y))
 
@@ -39,6 +39,8 @@ int cal_num;
 int cal_lock;
 
 int signature_len;
+int **dtw;
+
 
 struct node {
 	long long event_value;
@@ -93,11 +95,7 @@ double Euclidean_Distance(int *data1, int *data2, int w) {
 }
 
 int DTW_Distance(int *data1, int *data2, int w) {
-
-        int **dtw = (int **)malloc(sizeof(int *)*(WINDOW_SIZE+1));
-        int i, j;
-        for (i=0; i<WINDOW_SIZE+1; i++)
-                dtw[i] = (int *)malloc(sizeof(int)*(WINDOW_SIZE+1));
+	int i, j;
         for (i=0; i<WINDOW_SIZE+1; i++) {
 		for (j=0; j<WINDOW_SIZE+1; j++) {
 	                dtw[i][j] = INT_MAX;
@@ -209,6 +207,7 @@ void *perf_victim(void *argv) {
         cal_average1(head, nomi_test_set, average);
 	
 	/* running profiling and calculation*/
+	int k;
         for (j=0; j<ROUND_V; j++) {
                 ioctl(fd, PERF_EVENT_IOC_RESET, 0);
                 ioctl(fd, PERF_EVENT_IOC_ENABLE, 0);
@@ -225,13 +224,14 @@ void *perf_victim(void *argv) {
 
 		read(fd, &(end->event_value), sizeof(long long));
 		end->time_value = (start_cycle-begin_stamp)/1000;
+		printf("%lu           %lu\n", end->time_value, end->event_value);
                 sum += end->event_value;
                 average = sum/WINDOW_SIZE;
                 cal_average1(head, nomi_test_set, average);
 		cal_num ++;
 		cal_lock = 0;
 
-        }
+	}
 
         close(fd);
 
@@ -242,7 +242,7 @@ void *perf_attacker(void *argv) {
 
         int i, j;
 
-        uint64_t value;
+        uint64_t value, value1;
 
         FILE *output[__NR_PID];
 	for (j=0; j<__NR_PID; j++) {
@@ -251,8 +251,8 @@ void *perf_attacker(void *argv) {
 		output[j] = fopen(name, "a");
 	}
 
-        struct perf_event_attr pe;
-        int fd;
+        struct perf_event_attr pe, pe1;
+        int fd, fd1;
 
         memset(&pe, 0, sizeof(struct perf_event_attr));
         pe.type = PERF_TYPE_HW_CACHE;
@@ -267,29 +267,48 @@ void *perf_attacker(void *argv) {
         pe.exclude_host = 0;
         pe.exclude_guest = 0;
 
+        memset(&pe1, 0, sizeof(struct perf_event_attr));
+        pe1.type = PERF_TYPE_HW_CACHE;
+        pe1.config = (PERF_COUNT_HW_CACHE_LL)|(PERF_COUNT_HW_CACHE_OP_READ << 8)|(PERF_COUNT_HW_CACHE_RESULT_ACCESS << 16);
+        pe1.size = sizeof(struct perf_event_attr);
+        pe1.disabled = 1;
+        pe1.inherit = 0;
+        pe1.pinned = 1;
+        pe1.exclude_kernel = 0;
+        pe1.exclude_user = 0;
+        pe1.exclude_hv = 0;
+        pe1.exclude_host = 0;
+        pe1.exclude_guest = 0;
+
         uint64_t start_cycle;
 
 	begin_stamp = 0;
-	while (begin_stamp == 0);
+	while (begin_stamp == 1);
 	int x[__NR_PID];
         for (j=0; j<ROUND_A; j++) {
 		for (i=0; i<__NR_PID; i++)
 			x[i] = pid_a[i];
-		syscall(__NR_Check, x);
+//		syscall(__NR_Check, x);
 
 		for (i=0; i<__NR_PID; i++) {
 			if (x[i] > 0) {
         			fd = syscall(__NR_perf_event_open, &pe, pid_a[i], -1, -1, 0);
+        			fd1 = syscall(__NR_perf_event_open, &pe1, pid_a[i], -1, -1, 0);
 		                ioctl(fd, PERF_EVENT_IOC_RESET, 0);
         		        ioctl(fd, PERF_EVENT_IOC_ENABLE, 0);
+		                ioctl(fd1, PERF_EVENT_IOC_RESET, 0);
+        		        ioctl(fd1, PERF_EVENT_IOC_ENABLE, 0);
 
       			        start_cycle = rdtsc();
 		                while(rdtsc()-start_cycle<INTERVAL_A);
 
 		                ioctl(fd, PERF_EVENT_IOC_DISABLE, 0);
 		                read(fd, &value, sizeof(long long));
-		                fprintf(output[i], "%lu:           %lu\n", (start_cycle-begin_stamp)/1000, value);
+		                ioctl(fd1, PERF_EVENT_IOC_DISABLE, 0);
+		                read(fd1, &value1, sizeof(long long));
+		                fprintf(output[i], "%lu:           %lu\n", (start_cycle-begin_stamp)/1000, value1-value);
         			close(fd);
+        			close(fd1);
 
 			}
 		}
@@ -305,24 +324,28 @@ int main(int argc, char **argv) {
         pid_v = atoi(argv[1]);
 	int i;
 	for (i=0; i<__NR_PID; i++) {
-		pid_a[i] = atoi(argv[2+i]);
+		pid_a[i] = atoi(argv[3+i]);
 	}
 	INTERVAL_V = 300000;
-	INTERVAL_A = 3000000;
-	ROUND_V = 50000;
+	INTERVAL_A = 30000000;
+	ROUND_V = atoi(argv[2]);
 	ROUND_A = 5000;
 
-	begin_stamp = -1;
+        dtw = (int **)malloc(sizeof(int *)*(WINDOW_SIZE+1));
+        for (i=0; i<WINDOW_SIZE+1; i++)
+                dtw[i] = (int *)malloc(sizeof(int)*(WINDOW_SIZE+1));
+
+	begin_stamp = 0;
 	cal_num = 0;
 	cal_lock = 1;
 	pthread_t profile_victim, profile_attacker, process_data;
 
 	pthread_create(&profile_victim, NULL, perf_victim, NULL);
 	pthread_create(&process_data, NULL, cal_data, NULL);
-	pthread_create(&profile_attacker, NULL, perf_attacker, NULL);
+//	pthread_create(&profile_attacker, NULL, perf_attacker, NULL);
 
 	pthread_join(profile_victim, NULL);
 	pthread_join(process_data, NULL);
-	pthread_join(profile_attacker, NULL);
+//	pthread_join(profile_attacker, NULL);
         return 0;
 }

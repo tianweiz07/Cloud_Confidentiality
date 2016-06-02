@@ -19,8 +19,8 @@ int main(int argc, char **argv) {
         int fd;
 
         int pid = atoi(argv[1]);
-        uint64_t INTERVAL = 3000000;
-        int ROUND = atoi(argv[2]);
+        uint64_t INTERVAL = 300000*atoi(argv[2]);
+        int ROUND = 500;
 
         int j;
 
@@ -46,16 +46,21 @@ int main(int argc, char **argv) {
 
         fd = syscall(__NR_perf_event_open, &pe, pid, -1, -1, 0);
         uint64_t begin_stamp = rdtsc();
-        for (j=0; j<ROUND; j++) {
+        int x[1];
+	while (1) {
+//      for (j=0; j<ROUND; j++) {
                 ioctl(fd, PERF_EVENT_IOC_RESET, 0);
                 ioctl(fd, PERF_EVENT_IOC_ENABLE, 0);
+
+	        x[0] = pid;
+                syscall(189, x);
 
                 start_cycle = rdtsc();
                 while(rdtsc()-start_cycle<INTERVAL);
 
                 ioctl(fd, PERF_EVENT_IOC_DISABLE, 0);
-                read(fd, &value[j], sizeof(long long));
-                time[j] = (start_cycle-begin_stamp)/1000;
+//                read(fd, &value[j], sizeof(long long));
+//                time[j] = (start_cycle-begin_stamp)/1000;
         }
         close(fd);
 
